@@ -35,7 +35,7 @@ public class CourseListParser {
                             .registerTypeAdapter(Date.class, new CustomDateDeserializer())
                             .create();
 
-            Course[] courses = gson.fromJson(json, CourseListContainer.class).courses;
+            Course[] courses = gson.fromJson(json, Course[].class);
 
             List<Course> courseList = new ArrayList<>();
             for (Course course : courses) {

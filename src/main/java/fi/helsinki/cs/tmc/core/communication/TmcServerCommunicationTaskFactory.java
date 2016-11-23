@@ -93,6 +93,7 @@ public class TmcServerCommunicationTaskFactory {
         url = UriUtils.withQueryParam(url, "api_version", "" + API_VERSION);
         url = UriUtils.withQueryParam(url, "client", settings.clientName());
         url = UriUtils.withQueryParam(url, "client_version", clientVersion);
+        url = UriUtils.withQueryParam(url, "access_token", settings.getOauthToken());
         return url;
     }
 
